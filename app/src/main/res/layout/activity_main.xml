@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#D1D0D0"
+    app:layout_constraintCircleRadius="10dp"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:id="@+id/sv2"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="0dp"
+        android:layout_height="800dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sv2">
+
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/montaga"
+            android:text="Hi! What's your cravings for today?"
+            android:textColor="#5F4F37"
+            android:textSize="22sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/txt5"
+            android:layout_width="381dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montaga"
+            android:text="Order and Eat"
+            android:textColor="#A68553"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:autofillHints=""
+            android:background="@drawable/searchbtn"
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:text="Search for your cravings"
+            android:textColor="#808080"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            tools:ignore="LabelFor,RtlSymmetry,TouchTargetSizeCheck" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/imgv6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintCircleRadius="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/deliveryman"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="85dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="42dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/searchbtn"
+                android:text="Order Now!"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConstraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="467dp"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+            app:layout_constraintEnd_toStartOf="@+id/txtcat"
+            app:layout_constraintStart_toStartOf="@+id/txtcat"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView">
+
+            <TextView
+                android:id="@+id/txtcat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montaga"
+                android:text="Categories"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="385dp"
+                android:layout_height="139dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtpop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtcat" />
+
+            <TextView
+                android:id="@+id/txtpop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="280dp"
+                android:fontFamily="@font/montaga"
+                android:text="Popular"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/recyclerView2"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+                tools:ignore="HardcodedText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView2"
+                android:layout_width="385dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="89dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+                app:layout_constraintStart_toStartOf="@+id/recyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/txtpop" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="409dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:backgroundTint="#f6f6f6"
+            app:fabCradleMargin="5dp"
+            app:fabCradleRoundedCornerRadius="40dp"
+            app:fabCradleVerticalOffset="3dp">
+
+            <LinearLayout
+                android:layout_width="420dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:id="@+id/homeBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/home"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/txt6"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montaga"
+                        android:text="Home"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profileBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="53dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+
+                    <ImageView
+                        android:id="@+id/img8"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/profile" />
+
+                    <TextView
+                        android:id="@+id/txt7"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montaga"
+                        android:text="Profile"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/supportBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="53dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="75dp"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+
+                    <ImageView
+                        android:id="@+id/img9"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        app:srcCompat="@drawable/support" />
+
+                    <TextView
+                        android:id="@+id/txt8"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montaga"
+                        android:text="Support"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settingsBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="53dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="40dp"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+
+                    <ImageView
+                        android:id="@+id/img10"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="3dp"
+                        app:srcCompat="@drawable/setting" />
+
+                    <TextView
+                        android:id="@+id/txt9"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montaga"
+                        android:text="Settings"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:src="@drawable/cart"
+            app:backgroundTint="#98A8F8"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="top|center"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
